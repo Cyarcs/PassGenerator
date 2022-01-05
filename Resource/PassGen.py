@@ -117,7 +117,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Pass gen"))
         self.groupBox.setTitle(_translate("MainWindow", "Type"))
         self.rb_three.setText(_translate("MainWindow", "xxx-xxx-xxx"))
         self.rb_two.setText(_translate("MainWindow", "xxx-xxx"))
@@ -125,5 +125,5 @@ class Ui_MainWindow(object):
         self.btn_copy.setText(_translate("MainWindow", "Copy"))
         self.len_pass.setText(_translate("MainWindow", "Length pass"))
         self.le_len_pass.setText(_translate("MainWindow", "6"))
-        self.chb_number.setText(_translate("MainWindow", "Number"))
-        self.chb_char.setText(_translate("MainWindow", "Сharacter"))
+        self.chb_number.setText(_translate("MainWindow", "Numbers"))
+        self.chb_char.setText(_translate("MainWindow", "Symbols"))
