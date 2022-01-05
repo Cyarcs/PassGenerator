@@ -2,8 +2,7 @@ import random
 import string
 import sys
 
-from PyQt6 import QtWidgets, QtGui, QtCore, uic
-from PyQt6.QtWidgets import QFileDialog, QLabel
+from PyQt6 import QtWidgets, QtGui
 
 from Resource.PassGen import Ui_MainWindow
 
@@ -64,18 +63,18 @@ class myWindow(QtWidgets.QMainWindow):
         else:
             self.typePassWord = 3
 
-    def _random(self, types):
+    def _randomChoice(self, types):
         return random.choice(types)
 
     def genPass(self, typePass, lenpass):
         word = ''
         for i in range(lenpass):
-            self.rand_upper = self._random(self.UPPERCASE_CHARACTERS)
-            self.rand_lower = self._random(self.LOWERCASE_CHARACTERS)
+            self.rand_upper = self._randomChoice(self.UPPERCASE_CHARACTERS)
+            self.rand_lower = self._randomChoice(self.LOWERCASE_CHARACTERS)
             if self.ui.chb_number.isChecked():
-                self.rand_digit = self._random(self.DIGITS)
+                self.rand_digit = self._randomChoice(self.DIGITS)
             if self.ui.chb_char.isChecked():
-                self.rand_symbol = self._random(self.SYMBOLS)
+                self.rand_symbol = self._randomChoice(self.SYMBOLS)
             if typePass == 1:
                 if len(word) != lenpass:
                     word = f"{word}{self.rand_upper}{self.rand_lower}{self.rand_digit}{self.rand_symbol}"
